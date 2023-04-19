@@ -20,8 +20,6 @@
     />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav-bar></nav-bar>
 
     <div class="wrapper">
       <!-- Sidebar  -->
@@ -29,6 +27,8 @@
 
       <!-- Page Content  -->
       <div id="content">
+        <!-- Navbar -->
+        <nav-bar></nav-bar>
         <div class="container py-2">
           <button class="btn show-side-btn" type="button"">
             <i data="show-side-navigation1" class="fas fa-bars"></i>
@@ -39,6 +39,11 @@
 
           <div class="container p-4 bg-white rounded shadow">
             <div class="row">
+              
+              <div class="col-md-3 pt-1">
+                <label></label>
+                <input placeholder="Pesquisar..." class="form-control" type="search" name="s" title="Search" value="">
+              </div>
               <div class="col-md-3 pt-1">
                 <label>Agência</label>
                 <select class="form-control">
@@ -46,19 +51,13 @@
                 </select>
               </div>
               <div class="col-md-3 pt-1">
-                <label>Associado</label>
+                <label>Comprador</label>
                 <select class="form-control">
                   <option>Selecionar</option>
                 </select>
               </div>
               <div class="col-md-3 pt-1">
-                <label>Mês</label>
-                <select class="form-control">
-                  <option>Selecionar</option>
-                </select>
-              </div>
-              <div class="col-md-3 pt-1">
-                <label>Ano</label>
+                <label>Vendedor</label>
                 <select class="form-control">
                   <option>Selecionar</option>
                 </select>

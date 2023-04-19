@@ -4,12 +4,12 @@ class SideBar extends HTMLElement {
     <aside class="sidebar fixed-left  top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
     <i class="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
     <div class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
-      <img class="rounded-pill img-fluid" width="65" src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance" alt="">
+      <img class="rounded-pill img-fluid p-2" width="65" src="../assets/img/mini-logo.jpeg" alt="">
       <div class="ms-2">
         <h5 class="fs-6 mb-0">
-          <a class="text-decoration-none" href="#">Jone Doe</a>
+          <a class="text-decoration-none" href="#">Rede Trade</a>
         </h5>
-        <p class="mt-1 mb-0">Lorem ipsum dolor sit amet consectetur.</p>
+        <p class="mt-1 mb-0">Informações da empresa/usuário.</p>
       </div>
     </div>
   
@@ -99,72 +99,70 @@ class SideBar extends HTMLElement {
 }
 customElements.define("side-bar", SideBar);
 
-
 function selectElement(selector) {
-  return document.querySelector(selector)
+  return document.querySelector(selector);
 }
 
 function find(el, selector) {
-  let finded
-  return (finded = el.querySelector(selector)) ? finded : null
+  let finded;
+  return (finded = el.querySelector(selector)) ? finded : null;
 }
 
 function siblings(el) {
-  const siblings = []
+  const siblings = [];
   for (let sibling of el.parentNode.children) {
     if (sibling !== el) {
-      siblings.push(sibling)
+      siblings.push(sibling);
     }
   }
-  return siblings
+  return siblings;
 }
 
-const showAsideBtn = selectElement('.show-side-btn')
-const sidebar = selectElement('.sidebar')
+const showAsideBtn = selectElement(".show-side-btn");
+const sidebar = selectElement(".sidebar");
 
-var slideNavDropdown = $('.sidebar-dropdown');
+var slideNavDropdown = $(".sidebar-dropdown");
 
-selectElement('.sidebar .categories').addEventListener('click', function (event) {
+selectElement(".sidebar .categories").addEventListener(
+  "click",
+  function (event) {
+    const item = event.target.closest(".has-dropdown");
 
-  const item = event.target.closest('.has-dropdown')
-
-  if (! item) {
-   
-    return
-  }
-
-  item.classList.toggle('opened')
-
-  siblings(item).forEach(sibling => {
-    sibling.classList.remove('opened')
-  })
-
-
-  if (item.classList.contains('opened')) {
-    const toOpen = find(item, '.sidebar-dropdown')
-
-    event.preventDefault()
-
-    if (toOpen) {
-      toOpen.classList.add('active')
+    if (!item) {
+      return;
     }
 
-    siblings(item).forEach(sibling => {
-      const toClose = find(sibling, '.sidebar-dropdown')
+    item.classList.toggle("opened");
 
-      if (toClose) {
-        toClose.classList.remove('active')
+    siblings(item).forEach((sibling) => {
+      sibling.classList.remove("opened");
+    });
+
+    if (item.classList.contains("opened")) {
+      const toOpen = find(item, ".sidebar-dropdown");
+
+      event.preventDefault();
+
+      if (toOpen) {
+        toOpen.classList.add("active");
       }
-    })
-  } else {
-    find(item, '.sidebar-dropdown').classList.toggle('active')
+
+      siblings(item).forEach((sibling) => {
+        const toClose = find(sibling, ".sidebar-dropdown");
+
+        if (toClose) {
+          toClose.classList.remove("active");
+        }
+      });
+    } else {
+      find(item, ".sidebar-dropdown").classList.toggle("active");
+    }
   }
-})
+);
 
-showAsideBtn.addEventListener('click', function () {
-   sidebar.classList.toggle('closed')
-
-})
+showAsideBtn.addEventListener("click", function () {
+  sidebar.classList.toggle("closed");
+});
 
 // if (window.innerWidth < 767) {
 //   sidebar.classList.add('show-sidebar');
@@ -175,4 +173,3 @@ showAsideBtn.addEventListener('click', function () {
 //     sidebar.classList.remove('show-sidebar')
 //   }
 // })
-

@@ -20,62 +20,68 @@
     />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav-bar></nav-bar>
-
     <div class="wrapper">
       <!-- Sidebar  -->
       <side-bar></side-bar>
 
       <!-- Page Content  -->
       <div id="content">
+        <!-- Navbar -->
+        <nav-bar></nav-bar>
         <div class="container py-2">
           <div class="container-simple">
             <p class="text-muted font-weight-bold">Lista de associados</p>
           </div>
 
           <div class="container p-4 bg-white rounded shadow">
-            <div class="row row-cols-3">
-              <div class="col pt-1">
+            <div class="row">
+              <div class="col-md-3 pt-1">
+                <label></label>
+                <input
+                  placeholder="Pesquisar..."
+                  class="form-control"
+                  type="search"
+                  name="s"
+                  title="Search"
+                  value=""
+                />
+              </div>
+              <div class="col-md-3 pt-1">
                 <label>Agência</label>
                 <select class="form-control">
                   <option>Selecionar</option>
                 </select>
               </div>
-              <div class="col pt-1">
+              <div class="col-md-3 pt-1">
                 <label>Conta</label>
                 <select class="form-control">
                   <option>Selecionar</option>
                 </select>
               </div>
-              <div class="col pt-1">
-                <label>Nome Fantasia</label>
-                <select class="form-control">
-                  <option>Selecionar</option>
-                </select>
-              </div>
-              <div class="col pt-1">
+              <div class="col-md-3 pt-1">
                 <label>Categoria</label>
                 <select class="form-control">
                   <option>Selecionar</option>
                 </select>
               </div>
-              <div class="col pt-1">
+              <div class="col-md-3 pt-1">
                 <label>Cidade</label>
                 <select class="form-control">
                   <option>Selecionar</option>
                 </select>
               </div>
-              <div class="col pt-1">
+              <div class="col-md-3 pt-1">
                 <label>Estado</label>
                 <select class="form-control">
                   <option>Selecionar</option>
                 </select>
               </div>
-              <div class="col-4 offset-8 text-right pt-4">
-                <button type="button" class="btn btn-orange w-50 btn-sm">
-                  Solicitar
-                </button>
+              <div class="row button-container">
+                <div class="col-4 offset-8 text-right pt-4 button-container">
+                  <button type="button" class="btn btn-orange btn-sm">
+                    Localizar
+                  </button>
+                </div>
               </div>
             </div>
           </div>

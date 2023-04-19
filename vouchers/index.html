@@ -20,15 +20,13 @@
     />
   </head>
   <body>
-    <!-- Navbar -->
-    <nav-bar></nav-bar>
-
     <div class="wrapper">
       <!-- Sidebar  -->
       <side-bar></side-bar>
-
       <!-- Page Content  -->
       <div id="content">
+      <!-- Navbar -->
+      <nav-bar></nav-bar>
         <div class="container py-2">
           <button class="btn show-side-btn" type="button"">
             <i data="show-side-navigation1" class="fas fa-bars"></i>
@@ -39,6 +37,11 @@
 
           <div class="container p-4 bg-white rounded shadow">
             <div class="row">
+              
+              <div class="col-md-3 pt-1">
+                <label></label>
+                <input placeholder="Pesquisar..." class="form-control" type="search" name="s" title="Search" value="">
+              </div>
               <div class="col-md-3 pt-1">
                 <label>Agência</label>
                 <select class="form-control">
@@ -46,22 +49,26 @@
                 </select>
               </div>
               <div class="col-md-3 pt-1">
-                <label>Associado</label>
+                <label>Comprador</label>
                 <select class="form-control">
                   <option>Selecionar</option>
                 </select>
               </div>
               <div class="col-md-3 pt-1">
-                <label>Mês</label>
+                <label>Vendedor</label>
                 <select class="form-control">
                   <option>Selecionar</option>
                 </select>
               </div>
               <div class="col-md-3 pt-1">
-                <label>Ano</label>
+                <label>Status</label>
                 <select class="form-control">
                   <option>Selecionar</option>
                 </select>
+              </div>
+              <div class="col-md-3 pt-1">
+                <label>Data</label>
+                <input class="form-control" type="date">
               </div>
               <div class="row button-container">
                 <div class="col-4 offset-8 text-right pt-4 button-container">

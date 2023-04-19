@@ -10909,10 +10909,21 @@ body {
 :root {
   --newGray: #54595f;
 }
+
+/* ---------------------------------
+ -------------- NAVBAR -------------
+-------------------------------- */
 .navbar {
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
+.navbar.nav-reset {
+  padding-right: 0px !important;
+}
+
+/* ---------------------------------
+ ---------- MAIN CONTENT -----------
+-------------------------------- */
 .container-wordPress {
   padding: 40px 40px 40px 15px;
   background-color: var(--white);
@@ -10990,8 +11001,8 @@ body {
   }
 }
 
-/** --------------------------------
- -- DADOS
+/* ---------------------------------
+ -------------- DATA -------------
 -------------------------------- */
 .col-12.border-top.border-bottom.my-4.py-2 P {
   font-family: "Roboto", Sans-serif;
@@ -11009,6 +11020,7 @@ body {
   display: flex;
   padding-right: 0;
   justify-content: right;
+  position: relative;
 }
 
 .button-container.users {
@@ -11017,7 +11029,7 @@ body {
 
 .button-container button,
 button.extra {
-  width: 36%;
+  width: 45%;
   font-size: 13px;
   font-weight: 500;
   padding: 5px 5px;
@@ -11030,18 +11042,41 @@ button.extra {
   margin-right: 10px;
 }
 
-/** --------------------------------
- -- FOOTER
+/* ---------------------------------
+ -------------- FOOTER  -------------
 -------------------------------- */
-
 .footer h2 {
   font-size: 14px;
   color: white;
   left: 250px;
 }
 
-/** --------------------------------
- -- Sidebar 2
+/* ---------------------------------
+ ----------- ASSOCIADOS ------------
+-------------------------------- */
+
+.associados {
+  display: flex;
+  justify-content: space-around;
+}
+
+.associados .tag {
+  content: "/f02c";
+}
+
+.card .name {
+  text-align: center;
+}
+
+.associados .description {
+  margin: 0px 30px 60px 30px;
+  padding: 30px;
+  width: 100%;
+  height: 30px;
+}
+
+/* ---------------------------------
+ -------------- SIDEBAR -------------
 -------------------------------- */
 
 aside.sidebar.closed {
